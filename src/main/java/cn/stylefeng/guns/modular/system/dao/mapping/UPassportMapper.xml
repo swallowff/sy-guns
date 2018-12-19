@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.guns.modular.system.dao.UPassportMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.guns.modular.system.model.UPassport">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="email" property="email" />
+        <result column="telephone" property="telephone" />
+        <result column="password" property="password" />
+        <result column="salt" property="salt" />
+        <result column="reg_time" property="regTime" />
+        <result column="reg_ip" property="regIp" />
+        <result column="reg_type" property="regType" />
+        <result column="reg_from" property="regFrom" />
+        <result column="status" property="status" />
+        <result column="reason" property="reason" />
+        <result column="memo" property="memo" />
+        <result column="is_test" property="isTest" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, login_name, email, telephone, password, salt, reg_time, reg_ip, reg_type, reg_from, status, reason, memo, is_test
+    </sql>
+
+</mapper>

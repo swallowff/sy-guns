@@ -1,0 +1,45 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <!--<#input id="id" name="主键ID" underline="true"/>-->
+                            <#input id="loginName" name="登录名" underline="true"/>
+                            <#input id="email" name="邮箱" underline="true"/>
+                            <#input id="telephone" name="手机" underline="true"/>
+                            <#input id="password" name="密码" underline="true"/>
+                            <#input id="salt" name="登录盐值" underline="true"/>
+                            <#input id="regTime" name="注册时间" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="regIp" name="注册IP" underline="true"/>
+                            <#input id="regType" name="注册方式" underline="true"/>
+                            <#input id="regFrom" name="注册类型" underline="true"/>
+                            <#input id="status" name="状态" underline="true"/>
+                            <#input id="reason" name="冻结原因" underline="true"/>
+                            <#input id="memo" name="备注" underline="true"/>
+                            <#input id="isTest" name="是否测试" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="UPassportInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="UPassportInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/manage/uPassport/uPassport_info.js"></script>
+<script>
+    laydate.render({
+        elem: '#regTime',
+        type: 'datetime'
+    });
+</script>
+@}
