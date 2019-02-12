@@ -11,7 +11,7 @@
                             <#input id="telephone" name="手机" value="${item.telephone}" underline="true"/>
                             <#input id="password" name="密码" value="${item.password}" underline="true"/>
                             <#input id="salt" name="登录盐值" value="${item.salt}" underline="true"/>
-                            <#input id="regTime" name="注册时间" value="${item.regTime}" underline="true" type="text"/>
+                            <#input id="regTime" name="注册时间" value="${item.regTime}" underline="true" type="text" isTime="true"/>
                 </div>
 
                 <div class="col-sm-6">
@@ -36,10 +36,16 @@
     </div>
 </div>
 <script src="${ctxPath}/static/modular/manage/uPassport/uPassport_info.js"></script>
+<script src="${ctxPath}/static/js/common/DateUtils.js"></script>
 <script>
+    var time = '${item.regTime}';
+    DateUtils.expandDate();
+    var date = new Date(time);
+    var regTime = date.format('yyyy-MM-dd hh:mm:ss');
     laydate.render({
         elem: '#regTime',
-        type: 'datetime'
+        type: 'datetime',
+        value: regTime
     });
 </script>
 @}

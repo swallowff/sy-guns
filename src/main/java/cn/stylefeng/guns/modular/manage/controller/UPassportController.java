@@ -1,16 +1,23 @@
 package cn.stylefeng.guns.modular.manage.controller;
 
-import cn.stylefeng.roses.core.base.controller.BaseController;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.stylefeng.guns.core.common.exception.BizExceptionEnum;
 import cn.stylefeng.guns.core.log.LogObjectHolder;
-import org.springframework.web.bind.annotation.RequestParam;
-import cn.stylefeng.guns.modular.system.model.UPassport;
 import cn.stylefeng.guns.modular.manage.service.IUPassportService;
+import cn.stylefeng.guns.modular.system.model.UPassport;
+import cn.stylefeng.guns.modular.system.transfer.UPassportDto;
+import cn.stylefeng.roses.core.base.controller.BaseController;
+import cn.stylefeng.roses.kernel.model.exception.ServiceException;
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.validation.Valid;
 
 /**
  * 用户通行证控制器
@@ -68,7 +75,10 @@ public class UPassportController extends BaseController {
      */
     @RequestMapping(value = "/add")
     @ResponseBody
-    public Object add(UPassport uPassport) {
+    public Object add(@Valid UPassport uPassport,BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
+        }
         uPassportService.insert(uPassport);
         return SUCCESS_TIP;
     }

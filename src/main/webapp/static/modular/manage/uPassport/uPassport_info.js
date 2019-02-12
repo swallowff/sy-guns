@@ -101,6 +101,6 @@ UPassportInfoDlg.editSubmit = function() {
     ajax.start();
 }
 
-$(function() {
 
+$(function() {
 });

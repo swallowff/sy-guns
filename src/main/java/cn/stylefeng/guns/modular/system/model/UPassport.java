@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
@@ -53,6 +52,7 @@ public class UPassport extends Model<UPassport> {
     /**
      * 注册时间
      */
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date regTime;
     /**
      * 注册IP
@@ -136,12 +136,11 @@ public class UPassport extends Model<UPassport> {
         this.salt = salt;
     }
 
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     public Date getRegTime() {
         return regTime;
     }
 
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public void setRegTime(Date regTime) {
         this.regTime = regTime;
     }

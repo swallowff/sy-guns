@@ -32,6 +32,9 @@
                @if(isNotEmpty(disabled)){
                     disabled="${disabled}"
                @}
+               @if(isNotEmpty(parttern)){
+                    value="${commonUtil.formatDateTime(value,parttern)}"
+               @}
         >
         @if(isNotEmpty(hidden)){
             <input class="form-control" type="hidden" id="${hidden}" value="${hiddenValue!}">
