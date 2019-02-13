@@ -2,7 +2,23 @@
  * 初始化用户通行证详情对话框
  */
 var UPassportInfoDlg = {
-    uPassportInfoData : {}
+    uPassportInfoData : {},
+    validateFields: {
+        loginName: {
+            validators: {
+                notEmpty: {
+                    message: '登录名不能为空'
+                }
+            }
+        },
+        regTime: {
+            validators: {
+                notEmpty: {
+                    message: '时间不能为空'
+                }
+            }
+        }
+    }
 };
 
 /**
@@ -58,16 +74,26 @@ UPassportInfoDlg.collectData = function() {
     .set('status')
     .set('reason')
     .set('memo')
-    .set('isTest');
+    .set('test');
 }
+
+
+UPassportInfoDlg.validate = function () {
+    $('#UPassportInfoForm').data("bootstrapValidator").resetForm();
+    $('#UPassportInfoForm').bootstrapValidator('validate');
+    return $("#UPassportInfoForm").data('bootstrapValidator').isValid();
+};
 
 /**
  * 提交添加
  */
 UPassportInfoDlg.addSubmit = function() {
-
     this.clearData();
     this.collectData();
+
+    if (!this.validate()) {
+        return;
+    }
 
     //提交信息
     var ajax = new $ax(Feng.ctxPath + "/uPassport/add", function(data){
@@ -80,6 +106,7 @@ UPassportInfoDlg.addSubmit = function() {
     ajax.set(this.uPassportInfoData);
     ajax.start();
 }
+
 
 /**
  * 提交修改
@@ -103,4 +130,6 @@ UPassportInfoDlg.editSubmit = function() {
 
 
 $(function() {
+    Feng.initValidator("UPassportInfoForm", UPassportInfoDlg.validateFields);
+
 });

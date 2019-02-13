@@ -3,11 +3,10 @@ package cn.stylefeng.guns.modular.manage.controller;
 import cn.stylefeng.guns.core.common.exception.BizExceptionEnum;
 import cn.stylefeng.guns.core.log.LogObjectHolder;
 import cn.stylefeng.guns.modular.manage.service.IUPassportService;
+import cn.stylefeng.guns.modular.manage.warpper.UPassportWarpper;
 import cn.stylefeng.guns.modular.system.model.UPassport;
-import cn.stylefeng.guns.modular.system.transfer.UPassportDto;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,11 +17,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 用户通行证控制器
  *
- * @author fengshuonan
+ * @author shenyu
  * @Date 2018-12-19 16:16:00
  */
 @Controller
@@ -67,7 +68,8 @@ public class UPassportController extends BaseController {
     @RequestMapping(value = "/list")
     @ResponseBody
     public Object list(String condition) {
-        return uPassportService.selectList(null);
+        List<Map<String,Object>> uPassports = uPassportService.selectUPassports(null);
+        return new UPassportWarpper(uPassports).wrap();
     }
 
     /**

@@ -19,7 +19,6 @@ import cn.stylefeng.guns.core.tag.DictSelectorTag;
 import cn.stylefeng.guns.core.util.CommonUtil;
 import cn.stylefeng.guns.core.util.KaptchaUtil;
 import cn.stylefeng.roses.core.util.ToolUtil;
-import org.apache.commons.lang3.time.DateUtils;
 import org.beetl.core.Context;
 import org.beetl.core.Function;
 import org.beetl.ext.spring.BeetlGroupUtilConfiguration;
@@ -28,7 +27,6 @@ import org.springframework.core.env.Environment;
 
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 
 /**
  * beetl拓展配置,绑定一些工具类,方便在模板中直接调用

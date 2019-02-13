@@ -21,7 +21,7 @@
                             <#input id="status" name="状态" value="${item.status}" underline="true"/>
                             <#input id="reason" name="冻结原因" value="${item.reason}" underline="true"/>
                             <#input id="memo" name="备注" value="${item.memo}" underline="true"/>
-                            <#input id="isTest" name="是否测试" value="${item.isTest}" />
+                            <#dictSelector id="test" name ="是否测试" code="yes_no" label="是否测试"  underline="true" value="${item.test}"/>
                 </div>
             </div>
 

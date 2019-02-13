@@ -1,7 +1,7 @@
 @layout("/common/_container.html"){
 <div class="ibox float-e-margins">
     <div class="ibox-content">
-        <div class="form-horizontal">
+        <div class="form-horizontal" id="UPassportInfoForm">
 
             <div class="row">
                 <div class="col-sm-6 b-r">
@@ -21,7 +21,8 @@
                             <#input id="status" name="状态" underline="true"/>
                             <#input id="reason" name="冻结原因" underline="true"/>
                             <#input id="memo" name="备注" underline="true"/>
-                            <#input id="isTest" name="是否测试" underline="true"/>
+                            <!--<#input id="isTest" name="是否测试" underline="true"/>-->
+                            <#dictSelector id="isTest" name ="是否测试" code="yes_no" label="是否测试"  underline="true"/>
                 </div>
             </div>
 

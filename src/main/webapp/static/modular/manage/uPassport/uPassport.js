@@ -27,7 +27,7 @@ UPassport.initColumn = function () {
             {title: '状态', field: 'status', visible: true, align: 'center', valign: 'middle'},
             {title: '冻结原因', field: 'reason', visible: true, align: 'center', valign: 'middle'},
             {title: '备注', field: 'memo', visible: true, align: 'center', valign: 'middle'},
-            {title: '是否测试', field: 'isTest', visible: true, align: 'center', valign: 'middle'}
+            {title: '是否测试', field: 'test', visible: true, align: 'center', valign: 'middle'}
     ];
 };
 

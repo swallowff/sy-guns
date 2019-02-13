@@ -21,7 +21,7 @@ spring:
       prefix: /WEB-INF/view
   devtools:
     restart:
-      enabled: false
+      enabled: true
       additional-paths: src/main/java
       exclude: static/**,WEB-INF/view/**
   servlet:
@@ -31,6 +31,9 @@ spring:
 
 mybatis-plus:
   typeAliasesPackage: cn.stylefeng.guns.modular.system.model
+  mapper-locations: classpath*:/cn/stylefeng/guns/modular/**/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 log:
   path: guns-logs

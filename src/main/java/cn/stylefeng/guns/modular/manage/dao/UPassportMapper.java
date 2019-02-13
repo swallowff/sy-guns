@@ -1,7 +1,10 @@
-package cn.stylefeng.guns.modular.system.dao;
+package cn.stylefeng.guns.modular.manage.dao;
 
 import cn.stylefeng.guns.modular.system.model.UPassport;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +16,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface UPassportMapper extends BaseMapper<UPassport> {
 
+    List<Map<String,Object>> selectUPassports(Object o);
 }

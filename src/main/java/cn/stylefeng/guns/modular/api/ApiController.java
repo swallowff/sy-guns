@@ -52,8 +52,8 @@ public class ApiController extends BaseController {
      * api登录接口，通过账号密码获取token
      */
     @RequestMapping("/auth")
-    public Object auth(@RequestParam("username") String username,
-                       @RequestParam("password") String password) {
+    public Object auth(@RequestParam(value = "username",required = true) String username,
+                       @RequestParam(value = "password",required = true) String password) {
 
         //封装请求账号密码为shiro可验证的token
         UsernamePasswordToken usernamePasswordToken = new UsernamePasswordToken(username, password.toCharArray());

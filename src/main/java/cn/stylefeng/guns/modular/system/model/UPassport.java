@@ -84,8 +84,8 @@ public class UPassport extends Model<UPassport> {
     /**
      * 是否测试
      */
-    @TableField("is_test")
-    private Integer isTest;
+    @TableField("test")
+    private Integer test;
 
 
     public Integer getId() {
@@ -193,12 +193,12 @@ public class UPassport extends Model<UPassport> {
         this.memo = memo;
     }
 
-    public Integer getIsTest() {
-        return isTest;
+    public Integer getTest() {
+        return test;
     }
 
-    public void setIsTest(Integer isTest) {
-        this.isTest = isTest;
+    public void setTest(Integer isTest) {
+        this.test = test;
     }
 
     @Override
@@ -222,7 +222,7 @@ public class UPassport extends Model<UPassport> {
         ", status=" + status +
         ", reason=" + reason +
         ", memo=" + memo +
-        ", isTest=" + isTest +
+        ", isTest=" + test +
         "}";
     }
 }
