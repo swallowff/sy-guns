@@ -9,12 +9,12 @@
         <version>2.0.1.RELEASE</version>
     </parent>
 
-    <groupId>cn.stylefeng.guns</groupId>
-    <artifactId>guns</artifactId>
+    <groupId>cn.bigfish.syna</groupId>
+    <artifactId>syna</artifactId>
     <version>1.0.0</version>
 
-    <name>guns-admin</name>
-    <description>guns 的spring boot版本</description>
+    <name>syna-admin</name>
+    <description>syna 的spring boot版本</description>
 
     <packaging>jar</packaging>
 

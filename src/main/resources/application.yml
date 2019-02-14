@@ -1,7 +1,7 @@
 server:
   port: 9001
 
-guns:
+syna:
   swagger-open: true              #是否开启swagger (true/false)
   kaptcha-open: false             #是否开启登录时验证码 (true/false)
   #  file-upload-path: d:/tmp     #文件上传目录(不配置的话为java.io.tmpdir目录)
@@ -30,8 +30,8 @@ spring:
       max-file-size: 100MB
 
 mybatis-plus:
-  typeAliasesPackage: cn.stylefeng.guns.modular.system.model
-  mapper-locations: classpath*:/cn/stylefeng/guns/modular/**/*Mapper.xml
+  typeAliasesPackage: cn.bigfish.syna.modular.system.model
+  mapper-locations: classpath*:/cn/bigfish/syna/modular/**/*Mapper.xml
   configuration:
     map-underscore-to-camel-case: true
 
