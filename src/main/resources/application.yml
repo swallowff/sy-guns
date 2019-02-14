@@ -31,7 +31,10 @@ spring:
 
 mybatis-plus:
   typeAliasesPackage: cn.bigfish.syna.modular.system.model
-  mapper-locations: classpath*:/cn/bigfish/syna/modular/**/*Mapper.xml
+  mapper-locations: classpath:/cn/bigfish/syna/modular/**/*Mapper.xml
+  global-config:
+    db-column-underline: true
+    refresh-mapper: true
   configuration:
     map-underscore-to-camel-case: true
 
