@@ -1,0 +1,46 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键" value="${item.id}" underline="true"/>
+                            <#input id="tittle" name="标题" value="${item.tittle}" underline="true"/>
+                            <#input id="thumbImg" name="缩略图" value="${item.thumbImg}" underline="true"/>
+                            <#input id="content" name="内容" value="${item.content}" underline="true"/>
+                            <#input id="authorId" name="作者ID" value="${item.authorId}" underline="true"/>
+                            <#input id="type" name="内容类型" value="${item.type}" underline="true"/>
+                            <#input id="status" name="状态" value="${item.status}" underline="true"/>
+                            <#input id="fmtType" name="格式化类型" value="${item.fmtType}" underline="true"/>
+                            <#input id="tags" name="标签" value="${item.tags}" underline="true"/>
+                            <#input id="categories" name="分类" value="${item.categories}" underline="true"/>
+                            <#input id="hits" name="点击量" value="${item.hits}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="allowComment" name="允许评论" value="${item.allowComment}" underline="true"/>
+                            <#input id="commentNum" name="评论数" value="${item.commentNum}" underline="true"/>
+                            <#input id="collectNum" name="收藏数" value="${item.collectNum}" underline="true"/>
+                            <#input id="version" name="版本" value="${item.version}" underline="true"/>
+                            <#input id="createBy" name="创建者" value="${item.createBy}" underline="true"/>
+                            <#input id="createDate" name="创建时间" value="${item.createDate}" underline="true"/>
+                            <#input id="updateBy" name="更新者" value="${item.updateBy}" underline="true"/>
+                            <#input id="updateDate" name="更新时间" value="${item.updateDate}" underline="true"/>
+                            <#input id="remarks" name="备注信息" value="${item.remarks}" underline="true"/>
+                            <#input id="delFlag" name="删除标记" value="${item.delFlag}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="ContentInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="ContentInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/manage/content/content_info.js"></script>
+@}

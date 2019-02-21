@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 8080
 
 syna:
   swagger-open: true              #是否开启swagger (true/false)
@@ -46,8 +46,8 @@ log:
 spring:
   profiles: local
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
-    username: shenyu
+    url: jdbc:mysql://120.79.225.48:3306/guns_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
+    username: root
     password: yanni623..
     filters: wall,mergeStat
 
@@ -89,6 +89,6 @@ spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=CONVERT_TO_NULL&useSSL=false&serverTimezone=CTT
     username: root
-    password: root
+    password: yanni623..
     filters: wall,mergeStat
 

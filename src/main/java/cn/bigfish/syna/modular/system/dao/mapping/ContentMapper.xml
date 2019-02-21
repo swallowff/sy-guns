@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.bigfish.syna.modular.system.dao.ContentMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.bigfish.syna.modular.system.model.Content">
+        <id column="id" property="id" />
+        <result column="tittle" property="tittle" />
+        <result column="thumb_img" property="thumbImg" />
+        <result column="content" property="content" />
+        <result column="author_id" property="authorId" />
+        <result column="type" property="type" />
+        <result column="status" property="status" />
+        <result column="fmt_type" property="fmtType" />
+        <result column="tags" property="tags" />
+        <result column="categories" property="categories" />
+        <result column="hits" property="hits" />
+        <result column="allow_comment" property="allowComment" />
+        <result column="comment_num" property="commentNum" />
+        <result column="collect_num" property="collectNum" />
+        <result column="version" property="version" />
+        <result column="create_by" property="createBy" />
+        <result column="create_date" property="createDate" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_date" property="updateDate" />
+        <result column="remarks" property="remarks" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, tittle, thumb_img, content, author_id, type, status, fmt_type, tags, categories, hits, allow_comment, comment_num, collect_num, version, create_by, create_date, update_by, update_date, remarks, del_flag
+    </sql>
+
+</mapper>
