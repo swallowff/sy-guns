@@ -1,4 +1,4 @@
-package cn.bigfish.syna.modular.system.model;
+package cn.bigfish.syna.modular.manage.model;
 
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;

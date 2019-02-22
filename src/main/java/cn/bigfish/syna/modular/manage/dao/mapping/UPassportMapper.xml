@@ -3,7 +3,7 @@
 <mapper namespace="cn.bigfish.syna.modular.manage.dao.UPassportMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.bigfish.syna.modular.system.model.UPassport">
+    <resultMap id="BaseResultMap" type="cn.bigfish.syna.modular.manage.model.UPassport">
         <id column="id" property="id" />
         <result column="login_name" property="loginName" />
         <result column="email" property="email" />

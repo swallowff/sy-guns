@@ -15,6 +15,7 @@
  */
 package cn.bigfish.syna.core.common.constant.factory;
 
+import cn.bigfish.syna.modular.system.model.User;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
 import cn.bigfish.syna.core.common.constant.cache.Cache;

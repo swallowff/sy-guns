@@ -1,6 +1,6 @@
 package cn.bigfish.syna.modular.manage.service;
 
-import cn.bigfish.syna.modular.system.model.UPassport;
+import cn.bigfish.syna.modular.manage.model.UPassport;
 import com.baomidou.mybatisplus.service.IService;
 
 import java.util.List;

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.bigfish.syna.modular.system.dao.ContentMapper">
+<mapper namespace="cn.bigfish.syna.modular.manage.dao.ContentMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="cn.bigfish.syna.modular.system.model.Content">
+    <resultMap id="BaseResultMap" type="cn.bigfish.syna.modular.manage.model.Content">
         <id column="id" property="id" />
         <result column="tittle" property="tittle" />
         <result column="thumb_img" property="thumbImg" />

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.beans.factory.annotation.Autowired;
 import cn.bigfish.syna.core.log.LogObjectHolder;
 import org.springframework.web.bind.annotation.RequestParam;
-import cn.bigfish.syna.modular.system.model.Content;
+import cn.bigfish.syna.modular.manage.model.Content;
 import cn.bigfish.syna.modular.manage.service.IContentService;
 
 /**

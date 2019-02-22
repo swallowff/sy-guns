@@ -1,6 +1,6 @@
 package cn.bigfish.syna.modular.manage.service;
 
-import cn.bigfish.syna.modular.system.model.Content;
+import cn.bigfish.syna.modular.manage.model.Content;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

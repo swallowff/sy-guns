@@ -1,6 +1,6 @@
-package cn.bigfish.syna.modular.system.dao;
+package cn.bigfish.syna.modular.manage.dao;
 
-import cn.bigfish.syna.modular.system.model.Content;
+import cn.bigfish.syna.modular.manage.model.Content;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

@@ -1,6 +1,6 @@
 package cn.bigfish.syna.modular.manage.service.impl;
 
-import cn.bigfish.syna.modular.system.model.UPassport;
+import cn.bigfish.syna.modular.manage.model.UPassport;
 import cn.bigfish.syna.modular.manage.dao.UPassportMapper;
 import cn.bigfish.syna.modular.manage.service.IUPassportService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;

@@ -1,7 +1,7 @@
 package cn.bigfish.syna.modular.manage.service.impl;
 
-import cn.bigfish.syna.modular.system.model.Content;
-import cn.bigfish.syna.modular.system.dao.ContentMapper;
+import cn.bigfish.syna.modular.manage.model.Content;
+import cn.bigfish.syna.modular.manage.dao.ContentMapper;
 import cn.bigfish.syna.modular.manage.service.IContentService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

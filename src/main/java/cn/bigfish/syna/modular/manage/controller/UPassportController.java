@@ -4,7 +4,7 @@ import cn.bigfish.syna.core.common.exception.BizExceptionEnum;
 import cn.bigfish.syna.core.log.LogObjectHolder;
 import cn.bigfish.syna.modular.manage.service.IUPassportService;
 import cn.bigfish.syna.modular.manage.warpper.UPassportWarpper;
-import cn.bigfish.syna.modular.system.model.UPassport;
+import cn.bigfish.syna.modular.manage.model.UPassport;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;

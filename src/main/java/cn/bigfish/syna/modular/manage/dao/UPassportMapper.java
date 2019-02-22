@@ -1,6 +1,6 @@
 package cn.bigfish.syna.modular.manage.dao;
 
-import cn.bigfish.syna.modular.system.model.UPassport;
+import cn.bigfish.syna.modular.manage.model.UPassport;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 import java.util.List;
